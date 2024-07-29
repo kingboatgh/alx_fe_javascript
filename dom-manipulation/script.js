@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
           document.getElementById('newQuoteText').value = '';
           document.getElementById('newQuoteCategory').value = '';
           alert('Quote added successfully!');
-          syncWithServer(newQuote);
+          syncQuotes(newQuote);
       } else {
           alert('Please enter both a quote and a category.');
       }
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   }
 
-  async function syncWithServer(newQuote) {
+  async function syncQuotes(newQuote) {
       try {
           const response = await fetch(SERVER_URL, {
               method: 'POST',

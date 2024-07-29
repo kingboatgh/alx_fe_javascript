@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (!response.ok) {
               throw new Error('Failed to sync with server');
           }
-          console.log('Quote synced with server:', newQuote);
+          alert('Quote synced with server!');
       } catch (error) {
           console.error('Sync error:', error);
       }
